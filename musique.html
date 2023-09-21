@@ -12,9 +12,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musique | Sofostech</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"-->
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/custom_music.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
@@ -57,11 +59,11 @@
             <h2 class="text-center mb-4">Mes Chansons</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mb-4">
                         <img src="/assets/images/music_gtr.jpg" class="card-img-top" width="auto" height="auto"
                             alt="Musique 1">
                         <div class="card-body">
-                            <h5 class="card-title">Titre de la Musique 1</h5>
+                            <h5 class="card-title">I need you</h5>
                             <p class="card-text">Description de la musique. Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit.</p>
                             <a href="https://www.youtube.com" target="_blank" class="btn btn-primary"
@@ -71,11 +73,11 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mb-4">
                         <img src="/assets/images/home_studio.jpg" class="card-img-top" width="auto" height="auto"
                             alt="Musique 2">
                         <div class="card-body">
-                            <h5 class="card-title">Titre de la Musique 2</h5>
+                            <h5 class="card-title">Abram / Abraham</h5>
                             <p class="card-text">Description de la musique. Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit.</p>
                             <a href="https://open.spotify.com" target="_blank" class="btn btn-primary"
@@ -85,11 +87,11 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mb-4">
                         <img src="/assets/images/music_gtr.jpg" class="card-img-top" width="auto" height="auto"
                             alt="Musique 3">
                         <div class="card-body">
-                            <h5 class="card-title">Titre de la Musique 3</h5>
+                            <h5 class="card-title">Prend garde de tomber</h5>
                             <p class="card-text">Description de la musique. Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit.</p>
                             <a href="https://soundcloud.com" target="_blank" class="btn btn-primary"
@@ -104,41 +106,84 @@
         <section class="mb-5">
             <h2 class="text-center mb-4">Vidéos YouTube</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID"
-                            allowfullscreen></iframe>
+                <div class="col-12 col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9 mb-4">
+                        <!--iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID"
+                            allowfullscreen></iframe-->
+                        <iframe width="560" height="315" class="embed-responsive-item rounded w-100"
+                            src="https://www.youtube.com/embed/jDSteLbHHWw?si=j73Ukd7BSiHofM3l&amp;start=3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID"
-                            allowfullscreen></iframe>
+                <div class="col-12 col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9 mb-4">
+                        <iframe width="560" height="315" class="embed-responsive-item rounded w-100"
+                            src="https://www.youtube.com/embed/FSROkdSA_ps?si=uMOrYw81FtA6M7zx&amp;start=3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9 mb-4">
+                        <iframe width="560" height="315" class="embed-responsive-item rounded w-100"
+                            src="https://www.youtube.com/embed/HcnfpSt6j6I?si=9KBNJYrz3uzjJpDf&amp;start=3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9 mb-4">
+                        <iframe width="560" height="315" class="embed-responsive-item rounded w-100"
+                            src="https://www.youtube.com/embed/jstVYe5PUIA?si=oEkC0H-RJV5jnjZF&amp;start=3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
         </section>
 
+    </main>
+
+    <main class="container mt-5">
         <section class="mb-5">
-            <h2 class="text-center mb-4">Création de Beats</h2>
-            <p class="text-center">Je suis également créateur de beats. Si vous avez besoin de beats pour vos projets,
-                n'hésitez pas à me contacter.</p>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Création de Beats</h2>
+                    <p class="text-center">Je suis également créateur de beats. Si vous avez besoin de beats pour vos
+                        projets,
+                        n'hésitez pas à me contacter.</p>
+                </div>
+            </div>
         </section>
 
         <section class="mb-5">
-            <h2 class="text-center mb-4">Autres</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
-                vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla quam nisi, laoreet ut metus a, commodo
-                commodo neque. Integer bibendum odio vitae dolor.</p>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Autres</h2>
+                    <p class="text-center">Lorem ipsum...</p>
+                </div>
+            </div>
         </section>
     </main>
+
 
     <footer class="bg-dark text-white text-center py-3 position-relative">
         <p>&copy; 2023 <a href="https://sofoste.tech/">sofoste.tech</a> Tous droits réservés.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!--script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script-->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/assets/js/scripts.js"></script>
 </body>

@@ -1,0 +1,6 @@
+/* Augmenter l'espacement entre les cartes et les vidéos sur les petits écrans */
+@media (max-width: 767px) {
+    .card, .embed-responsive {
+        margin-bottom: 30px !important; 
+    }
+}
