@@ -4,3 +4,8 @@
         margin-bottom: 30px !important; 
     }
 }
+
+header {
+    background: url('../images/header.png') no-repeat center center;
+    background-size: cover;
+}

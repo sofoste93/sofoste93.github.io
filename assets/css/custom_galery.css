@@ -55,3 +55,38 @@ footer {
 main {
     padding-bottom: 60px; /* Ajustez cette valeur en fonction de la hauteur de votre pied de page */
 }
+
+body,
+html {
+    height: 100%;
+}
+
+header {
+    background: url('../images/header.png') no-repeat center center;
+    background-size: cover;
+}
+
+nav.navbar {
+    margin-bottom: 20px;
+}
+
+main.container {
+    flex: 1 0 auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 10px;
+    }
+}
+
+.card {
+    margin-bottom: 40px;
+}
+

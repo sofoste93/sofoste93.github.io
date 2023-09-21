@@ -4,7 +4,7 @@ const swiper = new Swiper('.swiper-container', {
     spaceBetween: 10,
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 1500,
     },
     pagination: {
         el: '.swiper-pagination',
