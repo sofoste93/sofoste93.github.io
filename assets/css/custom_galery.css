@@ -1,0 +1,57 @@
+
+/* Pour garder le footer fixé en bas */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Pour assurer que la pagination reste dans le conteneur Swiper */
+.swiper-container {
+    position: relative;
+}
+
+/* Si nécessaire, ajustez la position de la pagination */
+.swiper-pagination {
+    bottom: 10px; /* Ajustez cette valeur selon vos besoins */
+}
+
+/* Pour les images à l'intérieur des cartes */
+.card-img-top {
+    width: 100%;       /* Permet de s'assurer que l'image prend toute la largeur de la carte */
+    height: 340px;     /* Vous pouvez ajuster cette valeur selon vos besoins */
+    object-fit: cover; /* S'assure que l'image couvre l'espace défini sans être déformée */
+}
+
+/* Pour centrer les cartes à l'intérieur des diapositives */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Pour définir la taille des cartes */
+.card {
+    width: 50%; /* Taille définie à 50% de la diapositive */
+    max-width: 340px; /* Maximum width to ensure cards are not too big on larger screens */
+    margin: auto; /* Centre la carte horizontalement dans la diapositive */
+}
+
+/* Pour assurer que le footer reste en bas de la page, même lorsqu'il y a peu de contenu */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Espace supplémentaire pour le contenu principal afin de s'assurer qu'il ne chevauche pas le pied de page */
+main {
+    padding-bottom: 60px; /* Ajustez cette valeur en fonction de la hauteur de votre pied de page */
+}

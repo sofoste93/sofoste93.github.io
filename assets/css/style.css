@@ -1,0 +1,92 @@
+body,
+html {
+    height: 100%;
+}
+
+header {
+    background: url('../images/header.png') no-repeat center center;
+    background-size: cover;
+}
+
+nav.navbar {
+    margin-bottom: 20px;
+}
+
+main.container {
+    flex: 1 0 auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 10px;
+    }
+}
+
+/* Musique Page */
+h2.text-center {
+    margin-bottom: 30px;
+}
+
+.embed-responsive {
+    margin-bottom: 20px;
+}
+
+main.container p.text-center {
+    margin-bottom: 20px;
+}
+
+/* Programmation Page */
+main.container h2.text-center {
+    margin-bottom: 40px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h5 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+/* Loisirs Page */
+.card img {
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+main.container h2.text-center {
+    margin-bottom: 40px;
+}
+
+.card h5 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}

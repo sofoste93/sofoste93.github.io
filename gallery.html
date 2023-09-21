@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie | Sofostech</title>
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/assets/css/custom_galery.css">
+</head>
+
+<body>
+<header class="bg-dark text-white text-center py-5">
+    <h1>Sofostech Galleria</h1>
+    <p>regarder mes photos &and; images</p>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" rel="noopener">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html" rel="noopener">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/musique.html" rel="noopener">Musique</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/programmation.html" rel="noopener">Programmation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/loisirs.html" rel="noopener">Loisirs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html" rel="noopener">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container mt-5">
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Découvrez mes photos</h2>
+
+        <!-- Swiper Container -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Cartes d'images enveloppées dans les diapositives Swiper -->
+                <div class="swiper-slide">
+                    <div class="card w-50">
+                        <img src="/assets/images/solar-system.jpg" class="card-img-top" alt="Photo 1">
+                        <div class="card-body">
+                            <h6 class="card-title text-center">Titre Image 1</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card w-50">
+                        <img src="/assets/images/football.jpg" class="card-img-top" alt="Photo 2">
+                        <div class="card-body">
+                            <h6 class="card-title text-center">Titre Image 2</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card w-50">
+                        <img src="/assets/images/music_gtr.jpg" class="card-img-top" alt="Photo 3">
+                        <div class="card-body">
+                            <h6 class="card-title text-center">Titre Image 3</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card w-50">
+                        <img src="/assets/images/milky_way_from_earth.jpg" class="card-img-top" alt="Photo 4"
+                             width="auto" height="auto">
+                        <div class="card-body">
+                            <h6 class="card-title text-center">Titre Image 4</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ... [Vos quatre autres cartes ici enveloppées de la même manière] ... -->
+
+            </div>
+            <!-- Boutons de navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Points de pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 Sofostech. Tous droits réservés.</p>
+</footer>
+
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+            },
+            576: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
