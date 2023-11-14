@@ -47,8 +47,6 @@ body {
 
 .color-info p {
     margin: 5px;
-
-    /* Style for the color information */
     background-color: #f7f7f7;
     padding: 15px;
     border-radius: 8px;
@@ -77,9 +75,7 @@ body {
 
 .color-history div:hover {
     transform: translateY(-2px);
-    /* Lift effect on hover */
     border-color: #aaa;
-    /* Highlight border on hover */
 }
 
 .footer {
@@ -88,10 +84,9 @@ body {
     width: 100%;
     text-align: center;
     position: relative;
-    /* Changed from fixed to relative */
+    /*from fixed to relative */
     bottom: 0;
     width: 100%;
     text-align: center;
     padding: 10px 0;
-    /* Added padding for better spacing */
 }
