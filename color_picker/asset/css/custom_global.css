@@ -1,0 +1,97 @@
+/*custom_global.css*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#colorPicker {
+    margin: 20px;
+    /* Adjust the margin to make it look better */
+    margin: 20px auto;
+    display: block;
+    /* To center in the div */
+}
+
+#displayColor {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border: 1px solid black;
+    /* Ensure the background is set to a default color 
+    that will change with the color picker */
+    background-color: #ffffff;
+    /* Add some shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#displayColor:hover {
+    /* Shadow effect on hover for interactivity */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.color-code-btn {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #f7f7f7;
+    color: #333;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.color-code-btn:hover {
+    background-color: #e7e7e7;
+}
+
+.color-info p {
+    margin: 5px;
+
+    /* Style for the color information */
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.color-history {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.color-history div {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #ddd;
+
+    cursor: pointer;
+    /* Indicates it's clickable */
+    transition: transform 0.2s ease-in-out;
+}
+
+.color-history div:hover {
+    transform: translateY(-2px);
+    /* Lift effect on hover */
+    border-color: #aaa;
+    /* Highlight border on hover */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    /* Changed from fixed to relative */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    /* Added padding for better spacing */
+}
