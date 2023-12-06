@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Normalisation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container jumbotron-fluid">
+        <h1 class="mt-5">Normalisation</h1>
+        <p>Explications et exemples sur la normalisation des bases de données.</p>
+        <h2>Table Initiale</h2>
+        <p>Employés (ID, Nom, Adresse, CodePostal, Ville, Département)</p>
+        <h2>Tables Normalisées</h2>
+        <p>Employés (ID, Nom, ID_Adresse, ID_Departement)</p>
+        <p>Adresses (ID_Adresse, Adresse, CodePostal, Ville)</p>
+        <p>Départements (ID_Departement, Nom_Departement)</p>
+    </div>
+
+    <div class="container jumbotron-fluid">
+        <h1 class="mt-5 text-primary">Exemple de Normalisation</h1>
+        <p>Explications et exemples sur la normalisation des bases de données.</p>
+    
+        <h2 class="text-danger">Table Initiale</h2>
+        <table class="table table-bordered table-hover table-striped table-danger">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Adresse</th>
+                    <th>CodePostal</th>
+                    <th>Ville</th>
+                    <th>Département</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Dupont</td>
+                    <td>123 rue de la Liberté</td>
+                    <td>75001</td>
+                    <td>Paris</td>
+                    <td>Marketing</td>
+                </tr>
+                <!-- Ajoutez plus de lignes ici si nécessaire -->
+            </tbody>
+        </table>
+        <hr>
+        <h2 class="text-success">Tables Normalisées</h2>
+        <h3 class="text-info">Table Employés</h3>
+        <table class="table table-bordered table-hover table-striped table-primary">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>ID_Adresse</th>
+                    <th>ID_Departement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Dupont</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <!-- Ajoutez plus de lignes ici si nécessaire -->
+            </tbody>
+        </table>
+    
+        <h3 class="text-info">Table Adresses</h3>
+        <table class="table table-bordered table-hover table-striped table-secondary">
+            <thead>
+                <tr>
+                    <th>ID_Adresse</th>
+                    <th>Adresse</th>
+                    <th>CodePostal</th>
+                    <th>Ville</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>123 rue de la Liberté</td>
+                    <td>75001</td>
+                    <td>Paris</td>
+                </tr>
+                <!-- Ajoutez plus de lignes ici si nécessaire -->
+            </tbody>
+        </table>
+    
+        <h3 class="text-info">Table Départements</h3>
+        <table class="table table-bordered table-hover table-striped table-dark">
+            <thead>
+                <tr>
+                    <th>ID_Departement</th>
+                    <th>Nom_Departement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Marketing</td>
+                </tr>
+                <!-- Ajoutez plus de lignes ici si nécessaire -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

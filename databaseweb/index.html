@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cheat Code DB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">DB Spickzettel</div>
+            <div class="list-group list-group-flush">
+                <a href="index.html" class="list-group-item list-group-item-action bg-light">Accueil</a>
+                <a href="normalisation.html" class="list-group-item list-group-item-action bg-light">Normalisation</a>
+                <a href="cles.html" class="list-group-item list-group-item-action bg-light">Clés</a>
+                <a href="relations.html" class="list-group-item list-group-item-action bg-light">Relations</a>
+                <a href="sql.html" class="list-group-item list-group-item-action bg-light">SQL</a>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+            </nav>
+
+            <div class="container-fluid">
+                <h1 class="mt-4">Bienvenue sur le Site de Préparation à l'Examen de Bases de Données</h1>
+                <p>Ce site vise à aider les étudiants à se préparer pour leur examen en bases de données...</p>
+
+                <div class="row">
+                    <!-- Card for Normalisation -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Normalisation</div>
+                            <div class="card-body">
+                                <p>Comprendre la normalisation des données et voir des exemples pratiques.</p>
+                                <a href="normalisation.html" class="btn btn-primary">Voir Plus</a>
+                            </div>
+                            <div class="card-footer">Sujet 1</div>
+                        </div>
+                    </div>
+
+                    <!-- Card for Clés -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Clés</div>
+                            <div class="card-body">
+                                <p>Apprendre sur les différents types de clés dans une base de données.</p>
+                                <a href="cles.html" class="btn btn-primary">Voir Plus</a>
+                            </div>
+                            <div class="card-footer">Sujet 2</div>
+                        </div>
+                    </div>
+
+                    <!-- Card for Relations -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Relations</div>
+                            <div class="card-body">
+                                <p>Découvrir comment les tables sont liées entre elles.</p>
+                                <a href="relations.html" class="btn btn-primary">Voir Plus</a>
+                            </div>
+                            <div class="card-footer">Sujet 3</div>
+                        </div>
+                    </div>
+
+                    <!-- Card for SQL -->
+                    <div class="col-md-4">
+                        <div class="card mt-4">
+                            <div class="card-header">SQL</div>
+                            <div class="card-body">
+                                <p>Exemples de requêtes SQL pour la gestion et l'interrogation des données.</p>
+                                <a href="sql.html" class="btn btn-primary">Voir Plus</a>
+                            </div>
+                            <div class="card-footer">Sujet 4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Toggle the side navigation
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+
+</html>
