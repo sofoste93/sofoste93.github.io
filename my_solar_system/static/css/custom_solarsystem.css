@@ -1,0 +1,489 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+}
+
+.solar-system {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    perspective: 1400px;
+}
+
+.sun {
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background: #ffce00 radial-gradient(circle, #FFD700, #FFA500);
+    box-shadow: 0 0 0 25px rgba(255, 206, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    animation: glowing 2.1s infinite alternate;
+}
+
+.orbit {
+    /* ... existing styles ... */
+    transform: translate(-50%, -50%) scaleX(0.85) rotateX(45deg);
+    /* Adjust scaleX and rotateX for desired effect */
+    opacity: 0.5;
+    /* Makes orbits slightly transparent for a more subtle effect */
+}
+
+/* Specific adjustments for each orbit */
+.mercury-orbit {
+    transform: translate(-50%, -50%) scaleX(0.82) rotateX(45deg);
+}
+
+.venus-orbit {
+    transform: translate(-50%, -50%) scaleX(0.84) rotateX(45deg);
+}
+
+.earth-orbit {
+    transform: translate(-50%, -50%) scaleX(0.86) rotateX(45deg);
+}
+
+.mars-orbit {
+    transform: translate(-50%, -50%) scaleX(0.88) rotateX(45deg);
+}
+
+.jupiter-orbit {
+    transform: translate(-50%, -50%) scaleX(0.90) rotateX(45deg);
+}
+
+.saturn-orbit {
+    transform: translate(-50%, -50%) scaleX(0.92) rotateX(45deg);
+}
+
+.uranus-orbit {
+    transform: translate(-50%, -50%) scaleX(0.94) rotateX(45deg);
+}
+
+.neptune-orbit {
+    transform: translate(-50%, -50%) scaleX(0.96) rotateX(45deg);
+}
+
+/* ... and so on for other orbits ... */
+
+.sun::before,
+.sun::after {
+    content: "";
+    position: relative;
+    top: 50%;
+    /* Adjust as needed to center the glow on the sun */
+    left: 50%;
+
+    /* This should be greater than 100% to have the glow surround the sun */
+    border-radius: 50%;
+    box-shadow: 15px 20px 50px 25px #ffce00;
+    /* Adjust the spread and size for desired glow effect */
+    opacity: 0.6;
+    z-index: -1;
+    /* Position the glow behind the sun. */
+    animation: glowing 1.5s infinite alternate;
+    /* Optional: for a pulsating glow */
+}
+
+@keyframes glowing {
+    from {
+        box-shadow: 5px 10px 35px 10px #ffce00;
+        opacity: 0.5;
+    }
+
+    to {
+        box-shadow: 5px 10px 65px 20px #ffce00;
+        opacity: 0.7;
+    }
+}
+
+.planet {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center bottom;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation: spin 20s linear infinite;
+}
+
+@keyframes venus-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-120px) rotate(0deg) rotateX(45deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-120px) rotate(-360deg) rotateX(45deg);
+    }
+}
+
+@keyframes earth-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-160px) rotate(0deg) rotateX(45deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-160px) rotate(-360deg) rotateX(45deg);
+    }
+}
+
+@keyframes mars-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-200px) rotate(0deg) rotateX(45deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-200px) rotate(-360deg) rotateX(45deg);
+    }
+}
+
+@keyframes jupiter-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-260px) rotate(0deg) rotateX(45deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-260px) rotate(-360deg) rotateX(45deg);
+    }
+}
+
+@keyframes saturn-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-300px) rotate(0deg) rotateX(45deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-300px) rotate(-360deg) rotateX(45deg);
+    }
+}
+
+@keyframes uranus-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-340px) rotate(0deg) rotateX(45deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-340px) rotate(-360deg) rotateX(45deg);
+    }
+}
+
+@keyframes neptune-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-380px) rotate(0deg) rotateX(45deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-380px) rotate(-360deg) rotateX(45deg);
+    }
+}
+
+@keyframes dwarf-planet-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-420px) rotate(0deg) rotateX(45deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-420px) rotate(-360deg) rotateX(45deg);
+    }
+}
+
+.mercury {
+    width: 12px;
+    height: 10px;
+    animation: mercury-orbit 4s linear infinite;
+    background: #a9a9a9 radial-gradient(circle, #d4d4d4, #808080);
+}
+
+@keyframes mercury-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-80px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-80px) rotate(-360deg);
+    }
+
+}
+
+.venus {
+    width: 20px;
+    height: 18px;
+    animation: venus-orbit 7s linear infinite;
+    background: #f39c12 radial-gradient(circle, #f5b041, #d35400);
+}
+
+@keyframes venus-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-120px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-120px) rotate(-360deg);
+    }
+}
+
+.earth {
+    width: 22px;
+    height: 20px;
+    animation: earth-orbit 10s linear infinite;
+    background: #3498db radial-gradient(circle, #5dade2, #21618c);
+}
+
+@keyframes earth-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-160px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-160px) rotate(-360deg);
+    }
+}
+
+.mars {
+    width: 18px;
+    height: 16px;
+    animation: mars-orbit 15s linear infinite;
+    background: #e74c3c radial-gradient(circle, #e57373, #c0392b);
+}
+
+@keyframes mars-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-200px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-200px) rotate(-360deg);
+    }
+}
+
+.jupiter {
+    width: 45px;
+    height: 43px;
+    animation: jupiter-orbit 30s linear infinite;
+    background: #d35400 radial-gradient(circle, #e67e22, #8e44ad);
+}
+
+@keyframes jupiter-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-260px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-260px) rotate(-360deg);
+    }
+}
+
+/* ... Previous CSS definitions ... */
+
+.saturn {
+    width: 38px;
+    height: 36px;
+    animation: saturn-orbit 45s linear infinite;
+    position: relative;
+    background: #f39c12 radial-gradient(circle, #beb076, #c48f3b);
+}
+
+.saturn .rings {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 20px;
+    border: 2px solid #e67e22;
+    border-top: none;
+    border-bottom: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(25deg);
+    border-radius: 50%;
+    background: transparent;
+}
+
+@keyframes saturn-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-300px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-300px) rotate(-360deg);
+    }
+}
+
+.uranus {
+    width: 35px;
+    height: 32px;
+    animation: uranus-orbit 60s linear infinite;
+    background: #2980b9 radial-gradient(circle, #5499c7, #154360);
+}
+
+@keyframes uranus-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-340px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-340px) rotate(-360deg);
+    }
+}
+
+.neptune {
+    width: 30px;
+    height: 28px;
+    animation: neptune-orbit 75s linear infinite;
+    background: #34495e radial-gradient(circle, #5d6d7e, #34495e);
+}
+
+@keyframes neptune-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-380px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-380px) rotate(-360deg);
+    }
+}
+
+/* ... Continue for other planets similarly ... */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*About planets*/
+.info-bubble {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 10px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+#planet-info-panel {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    max-width: 300px;
+}
+
+/*switch mode*/
+body.dark-mode,
+#the-planets,
+#the-planet {
+    background-color: #121212;
+    color: #fff;
+}
+
+.orbit {
+    border: 5px solid #cccccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    display: none;
+    /* Hide orbits by default */
+}
+
+/* Ellipses for orbits */
+.mercury-orbit {
+    width: 180px;
+    /* 2 x 90px */
+    height: 140px;
+    /* 2 x 70px */
+}
+
+.venus-orbit {
+    width: 270px;
+    /* 2 x 135px */
+    height: 210px;
+    /* 2 x 105px */
+}
+
+.earth-orbit {
+    width: 360px;
+    /* 2 x 180px */
+    height: 280px;
+    /* 2 x 140px */
+}
+
+.mars-orbit {
+    width: 440px;
+    /* 2 x 220px */
+    height: 360px;
+    /* 2 x 180px */
+}
+
+.jupiter-orbit {
+    width: 580px;
+    /* 2 x 290px */
+    height: 480px;
+    /* 2 x 240px */
+}
+
+.saturn-orbit {
+    width: 660px;
+    /* 2 x 330px */
+    height: 540px;
+    /* 2 x 270px */
+}
+
+.uranus-orbit {
+    width: 740px;
+    /* 2 x 370px */
+    height: 620px;
+    /* 2 x 310px */
+}
+
+.neptune-orbit {
+    width: 840px;
+    /* 2 x 420px */
+    height: 700px;
+    /* 2 x 350px */
+}
+
+
+.dwarf-planet {
+    width: 36px;
+    height: 33px;
+    animation: dwarf-planet-orbit 90s linear infinite;
+    background: #95a5a6 radial-gradient(circle, #5d6d7e, #131516);
+}
+
+@keyframes dwarf-planet-orbit {
+    0% {
+        transform: rotate(0deg) translateY(-420px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-420px) rotate(-360deg);
+    }
+}
+
+.planet,
+.sun {
+    box-shadow: 4px 10px 12px rgba(0, 0, 0, 0.5);
+}
