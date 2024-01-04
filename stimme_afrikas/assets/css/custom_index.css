@@ -1,0 +1,60 @@
+.fade-in-out {
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+}
+
+.element-visible {
+    opacity: 1.5;
+}
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    /* Ensure the sliding effect is contained within the container */
+}
+
+.slideshow-container .card-img {
+    margin-bottom: 20px;
+    /* Spacing between cards */
+    display: flex;
+    /* Align slides in a row */
+    transition: transform 1s ease-in-out;
+    /* Smooth sliding transition */
+}
+
+.mySlides .card-img {
+    min-width: 100%;
+    /* Each slide takes full width */
+    transition: transform 1s ease;
+    /* Smooth transition for the slide */
+}
+
+/* Adjust this to control the speed and direction of the slide */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
