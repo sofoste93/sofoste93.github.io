@@ -1,0 +1,20 @@
+.card {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.card-body {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+.card-img-top {
+    width: 100% !important;
+    /* Make image responsive */
+    height: 200px !important;
+    /* Fixed height for all images */
+    object-fit: cover !important;
+    /* This will cover the area without stretching the image */
+}
