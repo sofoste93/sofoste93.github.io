@@ -1,0 +1,28 @@
+.staff-contact, .donation-section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.staff-member-contact, .staff-member {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.staff-member img, .staff-member-contact img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .staff-member img, .staff-member-contact img {
+        width: 100px;
+        height: 100px;
+    }
+}

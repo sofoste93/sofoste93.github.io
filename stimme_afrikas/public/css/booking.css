@@ -1,0 +1,58 @@
+.booking-form {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.booking-form img {
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.social-media-links a {
+    margin: 0.5rem;
+    display: inline-block; /* For alignment and spacing of buttons */
+}
+
+.booking-form img {
+    margin-bottom: 1rem;
+    border: 3px solid #ddd;
+}
+
+.social-media-links a {
+    margin: 0.5rem;
+    display: inline-block; /* Aligns buttons in a line */
+}
+
+.staff-profiles {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.staff-member {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.staff-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.staff-member h4 {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .staff-member img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
