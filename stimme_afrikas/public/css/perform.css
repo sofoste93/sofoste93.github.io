@@ -1,0 +1,90 @@
+.performances {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.performance-gallery .gallery-item {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.performance-gallery .gallery-item:hover .gallery-caption {
+    visibility: visible;
+    opacity: 1;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.performance-card {
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.performance-card:hover {
+    transform: scale(1.05);
+}
+
+/* Performance Gallery Section */
+.performance-gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.performance-gallery .gallery-item {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.performance-gallery .gallery-item img {
+    width: 100%; /* Ensures all images take up the same width */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images cover the area without stretching */
+}
+
+.performance-gallery .gallery-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Upcoming Performances Section */
+.upcoming-performances .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.upcoming-performances .performance-card {
+    flex: 1;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.upcoming-performances .card-body {
+    flex-grow: 1; /* Allows the content to expand and push the footer down */
+}
+
+/* Ensuring all cards are the same height */
+.upcoming-performances .col-lg-4 {
+    display: flex;
+    padding: 0.5rem; /* Adds spacing between cards */
+}
+
+.performance-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

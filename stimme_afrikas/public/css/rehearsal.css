@@ -1,0 +1,68 @@
+.rehearsal-schedule {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Calendar and Gallery Section General Styles */
+.calendar .row, .rehearsal-gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Individual Card Styles */
+.calendar .card, .rehearsal-gallery .card {
+    flex: 1;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensuring all cards have the same height */
+.calendar .col-md-4, .rehearsal-gallery .col-md-4 {
+    display: flex;
+}
+
+/* Content of Card */
+.card-body {
+    flex-grow: 1; /* This ensures that the body takes up all available space pushing the footer down */
+}
+
+/* Styles for images in gallery cards */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* This will cover the area of the box without stretching the image */
+}
+
+.calendar .card {
+    margin-bottom: 1rem;
+}
+
+.rehearsal-gallery .card {
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.rehearsal-gallery {
+    padding: 2rem 0;
+}
+
+/* Gallery image styles */
+.rehearsal-gallery .row img {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+}
+
+.card-animation {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

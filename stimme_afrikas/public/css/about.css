@@ -1,0 +1,86 @@
+/**
+logo
+ */
+#navbar-logo {
+    height: 50px; /* Adjust the size as needed */
+    margin-right: 10px;
+}
+
+.choir-introduction {
+    background-color: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+}
+
+.staff-profiles {
+    padding: 2rem 0;
+}
+
+.staff-member {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.staff-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.gallery img {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.gallery .col-md-4 img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust this value as needed */
+    object-fit: cover;
+}
+
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+#lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .staff-member img {
+        width: 100px;
+        height: 100px;
+    }
+}

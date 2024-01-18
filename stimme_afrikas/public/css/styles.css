@@ -1,0 +1,113 @@
+/**
+general
+ */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+}
+/**
+logo
+ */
+#navbar-logo {
+    height: 50px; /* Adjust the size as needed */
+    margin-right: 10px;
+}
+.navbar.fixed-top {
+    z-index: 1030; /* A high z-index value to keep the navbar on top */
+}
+/**
+navbar
+ */
+.navbar-brand {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.navbar.scrolled {
+    background-color: #fff !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.navbar.scrolled .nav-link {
+    color: #555 !important;
+}
+/*
+carousel
+ */
+.carousel-item {
+    height: 75vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+}
+/*
+upcoming events
+ */
+.upcoming-events {
+    background-color: #f8f9fa;
+    padding: 2em;
+    text-align: center;
+}
+
+.upcoming-events h2 {
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.event {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: left;
+}
+
+.event h3 {
+    color: #007bff; /* Bootstrap primary color */
+    margin-bottom: 0.5em;
+}
+
+.event p {
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .event {
+        padding: 0.5em;
+    }
+}
+
+/**
+footer
+ */
+.footer {
+    color: #ddd;
+    background: #333;
+    padding: 1em 0;
+    text-align: center;
+}
+/**
+responsive design tweaks
+ */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .carousel-item {
+        height: 50vh;
+    }
+}
