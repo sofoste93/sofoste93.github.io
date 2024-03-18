@@ -1,0 +1,87 @@
+/* Global Styles */
+body,
+html {
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    flex: 1;
+}
+/* Hero Section */
+.hero {
+    background-image: url('../images/golden-music-bg.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 4rem 1rem;
+    /* Placeholder for hero image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    /* Adjust based on your image and content */
+}
+
+.hero h1 {
+    font-family: 'Montserrat', serif;
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Song List Enhancements */
+#song-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.list-group-item {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.list-group-item:hover {
+    transform: scale(1.05);
+}
+
+.list-group-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    color: #ddd;
+    background: #333;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 10px;
+    }
+
+    #song-list {
+        grid-template-columns: 1fr;
+    }
+}
