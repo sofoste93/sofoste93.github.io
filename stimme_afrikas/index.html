@@ -2,130 +2,161 @@
 <html lang="en">
 
 <head>
-    <title>Stimme Afrikas e.V.</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--logo-->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="mask-icon" href="assets/images/SA_Logo_transparent.png">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/custom_index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StimmeAfrikas Choir</title>
+    <!--logo icon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="public/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/icon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="public/images/icon/favicon.ico">
+    <!--css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/styles.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><strong>Stimme&#119070;Afrikas</strong></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">&#119070;</span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="public/images/stimmeafrikas_logo.png" alt="StimmeAfrikas Choir Logo" id="navbar-logo"
+                class="rounded-circle">
+            <span class="sr-only">StimmeAfrikas</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="public/home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="public/about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="public/rehearsal.html">Rehearsal Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="public/song-book.html">Song Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="public/performances.html">Performances</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="public/courses.html">Courses Offered</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="public/booking.html">Book Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="public/contact.html">Contact Us</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero d-flex align-items-center" style="background-color: #f4eae6; height: 80vh;">
-        <div class="container text-center">
-            <img src="assets/images/SA_Logo_transparent.png" alt="StimmeAfrikas Logo" class="img-fluid rounded-circle" style="max-height: 150px;">
-            <h1 class="display-4">Welcome to Stimme&#119070;Afrikas</h1>
-            <p class="lead">Celebrating African Choral Music</p>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="slideshow-container fade-in-out bg-dark">
-    
-        <!-- Full-width images with number text -->
-        <div class="mySlides fade">
-            <div class="card-img">
-                <img src="assets/images/African_choir_concert_2.jpg" class="card-img-top" alt="image here">
+    <!-- Main Carousel -->
+    <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/African_choir_concert_0.jpg" class="d-block w-100" alt="Choir Performance">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Welcome to StimmeAfrikas Choir</h5>
+                </div>
             </div>
-        </div>
-        
-        <div class="mySlides fade">
-            <div class="card-img">
-                <img src="assets/images/African_choir_concert_0.jpg" class="card-img-top" alt="another image here">
+            <div class="carousel-item">
+                <img src="assets/images/African_choir_concert_1.jpg" class="d-block w-100" alt="Choir Performance">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Another Choir Performance</h5>
+                </div>
             </div>
-        </div>
-    
-        <div class="mySlides fade">
-            <div class="card-img">
-                <img src="assets/images/African_choir_reheah_shall_0.jpg" style="width:100%" alt="image here">
+            <div class="carousel-item">
+                <img src="assets/images/African_choir_concert_2.jpg" class="d-block w-100" alt="Choir Performance">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>More from StimmeAfrikas Choir</h5>
+                </div>
             </div>
+            <!-- Additional carousel items will be added here -->
         </div>
-        
-        <div class="mySlides fade">
-            <div class="card-img">
-                <img src="assets/images/African_choir_concert_1.jpg" style="width:100%" alt="another image here">
-            </div>
-        </div>
-        <!-- More slides if needed -->
+        <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <!-- About Us Section -->
-    <section class="about-us py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">About &#119070; Us</h2>
-            <p class="text-center">StimmeAfrikas is a choir based in Giessen, passionate about bringing African choral
-                music to the world. We embrace diversity and celebrate our rich cultural heritage.</p>
+
+    <!-- Upcoming Events Section -->
+    <section class="upcoming-events">
+        <div class="container bg-dark-subtle">
+            <h2>Upcoming Events</h2>
+            <div class="event text-body-emphasis">
+                <h3>Giessen Music Festival: "Voices of Africa"</h3>
+                <p>Date: June 15, 2024</p>
+                <p>Location: Stadttheater Gießen</p>
+                <p>
+                    Join us for a vibrant evening at the renowned Stadttheater Gießen as we participate in the Giessen
+                    Music Festival. Our "Voices of Africa" performance will feature a unique blend of traditional
+                    African songs and contemporary compositions.
+                </p>
+            </div>
+            <div class="event">
+                <h3>Choral Workshop and Public Performance: "Harmony in Diversity"</h3>
+                <p>Date: April 17-24, 2024</p>
+                <p>Location: Kongresshalle Gießen</p>
+                <p>
+                    Inviting choral enthusiasts to a three-day workshop focusing on African choral music, culminating in
+                    a public performance at the Kongresshalle Gießen.
+                </p>
+            </div>
+            <div class="event">
+                <h3>Summer Open-Air Concert: "Melodies Under the Stars"</h3>
+                <p>Date: August 21, 2024</p>
+                <p>Location: Gießener Seewiese</p>
+                <p>
+                    Celebrate the longest day of the year with us at our Summer Open-Air Concert, "Melodies Under the
+                    Stars," at Gießener Seewiese. Enjoy a selection of uplifting African and international choral music.
+                </p>
+            </div>
+            <div class="card-footer">
+                For more information on upcoming events, please get in touch <a href="public/contact.html">with us</a>.
+                <hr class="my-sm-4 bg-light-subtle" />
+                <small class="text-muted">Last updated March 2024</small>
+            </div>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta py-5 bg-light">
-        <div class="container text-center">
-            <h2>Join &#119070; Us</h2>
-            <p>Interested in singing with us? Contact us for more information on how to become a member.</p>
-            <a href="#" class="btn btn-primary">Contact Us</a>
-        </div>
-    </section>
 
     <!-- Footer -->
-    <div class="text-center bg-warning">
-        <p>If you like what I do, you can support me with <a href="https://www.paypal.com/paypalme/sofoste">a cup of
-                coffee
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-cup-hot-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5Z" />
-                    <path
-                        d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z" />
-                </svg>
-            </a>.</p>
-        <footer class="bg-dark text-white text-center py-3 position-relative font-monospace fixed-bottom">
-            <p>&copy; 2024 <a href="https://sofoste.tech/">sofoste.tech</a> All rights reserved.</p>
-        </footer>
+    <div class="text-warning-emphasis px-3 py-4 footer">
+        <div class="container">
+            <a class="btn btn-outline-warning card-text text-light-emphasis text-center rounded-0"
+                href="https://www.paypal.com/paypalme/sofoste">If you appreciate my work, you can
+                support me <b><em>by buying me a cup of coffee</em></b>.
+                Your contributions are welcomed via PayPal
+                <img src='public/images/coffee_cup.png' width="16" height="16" alt="Coffee cup icon"
+                    class="coffee-animation">
+            </a>
+            <footer class="footer mt-5 bg-dark text-white">
+                <div class="container">
+                    <p class="text-muted">&copy; 2024 Stimme&#119070;Afrikas Choir</p>
+                    <p>Contact the developer
+                        <a href="https://www.sofoste.tech" target="_blank" rel="noopener" title="Webmaster:Stephane Sob">sofoste</a>
+                    </p>
+                </div>
+            </footer>
+        </div>
     </div>
 
-    <script src="assets/js/custom_index.js"></script>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-        </script>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="public/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.5/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

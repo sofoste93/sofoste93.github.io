@@ -9,19 +9,27 @@ body {
     padding-top: 80px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,h2,h3,h4,h5,h6 {
     font-family: 'Georgia', serif;
+    /*box-shadow: #555  0 -1px 0 inset;*/
+    margin: .7em 0;
+    padding: .4em 0;
 }
+
 /**
 logo
  */
 #navbar-logo {
-    height: 50px; /* Adjust the size as needed */
+    height: 50px;
+    /* Adjust the size as needed */
     margin-right: 10px;
 }
+
 .navbar.fixed-top {
-    z-index: 1030; /* A high z-index value to keep the navbar on top */
+    z-index: 1030;
+    /* A high z-index value to keep the navbar on top */
 }
+
 /**
 navbar
  */
@@ -32,12 +40,13 @@ navbar
 
 .navbar.scrolled {
     background-color: #fff !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
 }
 
 .navbar.scrolled .nav-link {
     color: #555 !important;
 }
+
 /*
 carousel
  */
@@ -52,6 +61,7 @@ carousel
     background: rgba(0, 0, 0, 0.5);
     padding: 1em;
 }
+
 /*
 upcoming events
  */
@@ -59,30 +69,41 @@ upcoming events
     background-color: #f8f9fa;
     padding: 2em;
     text-align: center;
+    opacity: .8;
 }
 
 .upcoming-events h2 {
-    color: #333;
     margin-bottom: 1em;
+    color: #333;
 }
 
 .event {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-image: url('../images/uLdODF.jpg');
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0.1, 0.1, 0.4);
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-bottom: 1em;
     padding: 1em;
+    width: 100%;
     text-align: left;
 }
 
+.event:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
 .event h3 {
-    color: #007bff; /* Bootstrap primary color */
+    color: #f3bf7b;
+    /* Bootstrap primary color */
     margin-bottom: 0.5em;
+    font-weight: 400;
 }
 
 .event p {
-    color: #555;
+    color: #e9dede;
     line-height: 1.5;
+    font-weight: 100;
 }
 
 @media (max-width: 768px) {
@@ -100,6 +121,7 @@ footer
     padding: 1em 0;
     text-align: center;
 }
+
 /**
 responsive design tweaks
  */
@@ -111,4 +133,21 @@ responsive design tweaks
     .carousel-item {
         height: 50vh;
     }
+}
+
+/** footer */
+.footer-animation {
+    transition: all 0.5s ease;
+}
+
+.footer-animation:hover {
+    transform: translateY(-10px);
+}
+
+.coffee-animation {
+    transition: all 0.5s ease;
+}
+
+.coffee-animation:hover {
+    transform: scale(1.2);
 }
