@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -11,23 +11,29 @@
     <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programmation | Sofostech</title>
+    <title>Programming | Sofostech</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!--link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"-->
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/custom_pro.css">
+    <style>
+        .card-text {
+            max-height: 4.8em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
 </head>
 
 <body>
     <header class="bg-dark text-white text-center py-5">
-        <h1>Mes Projets de Programmation</h1>
-        <p>Apprentissage &and; exercices pratiques</p>
+        <h1>My Programming Projects</h1>
+        <p>Learning & Practical Exercises</p>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Programmation</a>
+            <a class="navbar-brand" href="#">Programming</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,28 +41,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.html">Accueil</a>
+                        <a class="nav-link" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/news.html" rel="noopener">Annonces</a>
+                        <a class="nav-link" href="/news.html" rel="noopener">News</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/public/articles/articles.html" rel="noopener">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/musique.html">Musique</a>
+                        <a class="nav-link" href="/musique.html">Music</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/programmation.html">Programmation</a>
+                        <a class="nav-link active" aria-current="page" href="/programmation.html">Programming</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/databaseweb/index.html" rel="noopener">DB Cheat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/loisirs.html">Loisirs</a>
+                        <a class="nav-link" href="/loisirs.html">Hobbies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/gallery.html" rel="noopener">Gallerie</a>
+                        <a class="nav-link" href="/gallery.html" rel="noopener">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/mydreso.html" rel="noopener">MyDRESO</a>
@@ -71,103 +77,110 @@
 
     <main class="container mt-5">
         <section class="mb-5">
-            <h2 class="text-center mb-4">Quelques Projets</h2>
+            <h2 class="text-center mb-4">Some Projects</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="/assets/images/programming_ng_new.jpg" class="card-img-top" width="auto" height="auto"
-                            alt="Projet 1">
+                    <div class="card h-100">
+                        <img src="/assets/images/programming_ng_new.jpg" class="card-img-top" alt="Project 1">
                         <div class="card-body">
                             <h5 class="card-title">ESI-FIT</h5>
-                            <p class="card-text font-monospace">Une application fait en JavaFX pour simuler la gestion
-                                des clients dans
-                                un petit fitness studio.</p>
+                            <p class="card-text font-monospace">
+                                A JavaFX application to simulate client management in a small fitness studio.
+                            </p>
                             <a href="https://github.com/sofoste93/ESI-FIT-CM-APP" target="_blank"
-                                class="btn btn-primary" rel="noopener">Voir le code source</a>
+                                class="btn btn-primary" rel="noopener">View Source Code</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="/assets/images/programming_set.jpg" class="card-img-top" width="auto" height="auto"
-                            alt="Projet 2">
+                    <div class="card h-100">
+                        <img src="/assets/images/programming_set.jpg" class="card-img-top" alt="Project 2">
                         <div class="card-body">
                             <h5 class="card-title">TontineAPP</h5>
-                            <p class="card-text font-monospace">Écrit en Python et Flask pour gérer les tontines d'un
-                                petit groupe.</p>
+                            <p class="card-text font-monospace">
+                                Written in Python and Flask to manage tontines for a small group.
+                            </p>
                             <a href="http://sofostech.pythonanywhere.com/" target="_blank" class="btn btn-primary"
-                                rel="noopener">Voir
-                                la démo</a>
+                                rel="noopener">View Demo</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="/assets/images/solar-system.png" class="card-img-top" width="auto" height="auto" alt="Projet 2">
+                    <div class="card h-100">
+                        <img src="/assets/images/solar-system.png" class="card-img-top" alt="Project 3">
                         <div class="card-body">
                             <h5 class="card-title">Mini Solar System</h5>
                             <p class="card-text font-monospace">
-                                Because I like to contemplate the stars, I made this web project to simulate a simple version of our known solar
-                                system...
+                                Because I like to contemplate the stars, I made this web project to simulate a simple
+                                version of our known solar system.
                             </p>
-                            <a href="/my_solar_system/index.html" target="_blank" class="btn btn-primary" rel="noopener">
-                                check it out
-                            </a>
+                            <a href="/my_solar_system/index.html" target="_blank" class="btn btn-primary"
+                                rel="noopener">Check it Out</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="/assets/images/coding_.jpg" class="card-img-top" width="auto" height="auto"
-                            alt="Projet 3">
+                    <div class="card h-100">
+                        <img src="/assets/images/coding_.jpg" class="card-img-top" alt="Project 4">
                         <div class="card-body">
                             <h5 class="card-title">SmallQUIZ</h5>
-                            <p class="card-text font-monospace">A console application, written as part exercises in C language..
+                            <p class="card-text font-monospace">
+                                A console application, written as part exercises in C language.
                             </p>
                             <a href="https://github.com/sofoste93/SmallQUIZ" target="_blank" class="btn btn-primary"
-                                rel="noopener">View source code</a>
+                                rel="noopener">View Source Code</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="/assets/images/color_picker_sofostech-fotor_bg_remover.png" class="card-img-top" width="auto" height="auto" alt="Projet 3">
+                    <div class="card h-100">
+                        <img src="/assets/images/color_picker_sofostech-fotor_bg_remover.png" class="card-img-top"
+                            alt="Project 5">
                         <div class="card-body">
                             <h5 class="card-title">Color Picker Web App</h5>
-                            <p class="card-text font-monospace text-truncate">Color Picker is a simple web application that allows you to pick a color from a color input and displays the HEX,
-                            RGB, and HSL values of the chosen color. It also maintains a history of recently selected colors.
+                            <p class="card-text font-monospace text-truncate">
+                                Color Picker is a simple web application that allows you to pick a color from a color
+                                input and displays the HEX, RGB, and HSL values of the chosen color. It also maintains a
+                                history of recently selected colors.
                             </p>
-                            <a href="color_picker/index.html" target="_blank" class="btn btn-primary" rel="noopener">Try it out</a>
-                            <a href="https://github.com/sofoste93/color_picker" target="_blank" class="btn btn-secondary" rel="noopener">View source code</a>
+                            <a href="color_picker/index.html" target="_blank" class="btn btn-primary" rel="noopener">Try
+                                it Out</a>
+                            <button class="btn btn-secondary" data-bs-toggle="modal"
+                                data-bs-target="#colorPickerModal">Read More</button>
+                            <a href="https://github.com/sofoste93/color_picker" target="_blank"
+                                class="btn btn-secondary" rel="noopener">View Source Code</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="/stimme_afrikas/assets/images/choir_website_sa.png" class="card-img-top" width="auto" height="auto"
+                    <div class="card h-100">
+                        <img src="/stimme_afrikas/assets/images/choir_website_sa.png" class="card-img-top"
                             alt="StimmeAfrikas Choir Website">
                         <div class="card-body">
                             <h5 class="card-title">StimmeAfrikas Choir Website</h5>
-                            <p class="card-text font-monospace">A vibrant and engaging website designed for StimmeAfrikas, a choir group
-                                based in Giessen. The site features an interactive slideshow, event information, and details about the
-                                choir's mission and membership.</p>
-                            <a href="/stimme_afrikas/index.html" target="_blank" class="btn btn-primary" rel="noopener">Visit Website</a>
+                            <p class="card-text font-monospace">
+                                A vibrant and engaging website designed for StimmeAfrikas, a choir group based in
+                                Giessen. The site features an interactive slideshow, event information, and details
+                                about the choir's mission and membership.
+                            </p>
+                            <a href="/stimme_afrikas/index.html" target="_blank" class="btn btn-primary"
+                                rel="noopener">Visit Website</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="CodeQuest/assets/Code Quest_ JavaScript Adventures.png" class="card-img-top" width="auto"
-                            height="auto" alt="CodeQuest_JavaScript Adventures">
+                    <div class="card h-100">
+                        <img src="CodeQuest/assets/Code Quest_ JavaScript Adventures.png" class="card-img-top"
+                            alt="CodeQuest_JavaScript Adventures">
                         <div class="card-body">
                             <h5 class="card-title">CodeQuest: JavaScript Adventures</h5>
                             <p class="card-text font-monospace">
-                                Embark on a fun and educational journey with CodeQuest: JavaScript Adventures. Solve coding puzzles,
-                                learn JavaScript basics, and progress through an engaging fantasy world. Perfect for beginners eager to
-                                dive into the world of programming!
+                                Embark on a fun and educational journey with CodeQuest: JavaScript Adventures. Solve
+                                coding puzzles, learn JavaScript basics, and progress through an engaging fantasy world.
+                                Perfect for beginners eager to dive into the world of programming!
                             </p>
-                            <a href="CodeQuest/index.html" target="_blank" class="btn btn-primary" rel="noopener">Visit CodeQuest
-                                Now</a>
+                            <a href="CodeQuest/index.html" target="_blank" class="btn btn-primary" rel="noopener">Visit
+                                CodeQuest Now</a>
                         </div>
                     </div>
                 </div>
@@ -185,16 +198,36 @@
                     <path
                         d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z" />
                 </svg>
-            </a>.</p>
+            </a>.
+        </p>
         <footer class="bg-dark text-white text-center py-3 position-relative font-monospace fixed-bottom">
             <p>&copy; 2024 <a href="https://sofoste.tech/">sofoste.tech</a> All rights reserved.</p>
         </footer>
     </div>
 
+    <div class="modal fade" id="colorPickerModal" tabindex="-1" aria-labelledby="colorPickerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="colorPickerModalLabel">Color Picker Web App</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Color Picker is a simple web application that allows you to pick a color from a color input and
+                    displays the HEX, RGB, and HSL values of the chosen color. It also maintains a history of recently
+                    selected colors.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <!--script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script-->
 </body>
 
 </html>
