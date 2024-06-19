@@ -1,0 +1,90 @@
+body {
+    font-family: 'Consolas', monospace;
+}
+
+#about-me {
+    background: linear-gradient(to right, #ffcccc, #ffe6e6);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.dark-mode #about-me {
+    background: linear-gradient(to right, #0e0a18, #180303);
+    color: #e7ac0b;
+}
+
+#youtube-videos .card,
+#photo-gallery .card {
+    margin-bottom: 20px;
+}
+
+footer {
+    background: linear-gradient(to right, #152b28, #e2d6ac);
+    padding: 10px 0;
+}
+
+footer a {
+    color: #121212;
+}
+
+footer a:hover {
+    color: #e7ac0b;
+}
+
+.banner {
+    background: linear-gradient(to right, #014742, #f7dd87);
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode #navigationBar,
+.dark-mode #myFooter {
+    background-color: #1f1f1f;
+    color: #f7dd87;
+}
+
+.dark-mode .card {
+    background-color: #333;
+}
+
+.dark-mode a.nav-link,
+.dark-mode .navbar-brand {
+    color: #f7dd87 !important;
+}
+
+.dark-mode .social-icons a {
+    color: #f7dd87;
+}
+
+.dark-mode .social-icons a:hover {
+    color: #ffcc00;
+}
+
+/*NaVBAR effect*/
+.navbar-collapse {
+    transition: opacity 0.2s;
+    /* transition effect to opacity */
+}
+
+.navbar-collapse.show {
+    opacity: 1;
+}
+
+.navbar-collapse:not(.show) {
+    opacity: 0;
+    pointer-events: none;
+    /* prevent clicks on collapsed navbar */
+}
