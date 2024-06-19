@@ -23,4 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
             navbarCollapse.classList.remove('show');
         }
     });
+
+    let countdown = 5;
+    let timerInterval = setInterval(function () {
+        countdown--;
+        document.getElementById('timer').innerHTML = `Switching to dark mode in ${countdown} seconds...`;
+        if (countdown === 0) {
+            clearInterval(timerInterval);
+            document.body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="bi bi-sun"></i>';
+            document.getElementById('timer').style.display = 'none'; // hide the timer
+        }
+    }, 1000);
 });
