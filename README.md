@@ -1,5 +1,5 @@
 # sofoste93.github.io
-A simple static website - developed by a developer like you for everyone.
+A simple static website - this is just my GitHub Page📄 😊 
 
 
  # VISIT
