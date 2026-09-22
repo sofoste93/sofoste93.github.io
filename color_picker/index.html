@@ -1,132 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <title>Color Picker v2 | Sofostech</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./asset/css/custom_global.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="description" content="Sofoste Color Lab V3 — build, test and export accessible color palettes.">
+  <title>Color Lab V3 | Sofoste</title>
+  <link rel="stylesheet" href="asset/css/custom_global.css">
 </head>
-
 <body>
-    <div class="bg-dark text-white text-center py-5">
-        <h1>Color Picker v2</h1>
-        <p>Refreshed portfolio edition · Learning by doing</p>
-    </div>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Color Picker</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../sofosteweb/index.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="https://sofoste.de"><span class="brand-chip"></span><span><b>SOFOSTE</b><small>COLOR LAB</small></span></a>
+      <div class="status"><i></i> LIVE COLOR ENGINE <b>V3.0</b></div>
+      <nav><a href="https://github.com/sofoste93/color_picker" target="_blank" rel="noopener">SOURCE ↗</a><a href="https://sofoste.de/programmation.html">EXIT LAB ↗</a></nav>
     </header>
+
     <main>
-        <div class="container mt-5">
-            <h1 class="text-center mb-4">Color Picker</h1>
+      <section class="hero">
+        <div><p class="eyebrow">DIGITAL COLOR INSTRUMENT / 03</p><h1>Turn one color<br>into a <em>system.</em></h1></div>
+        <p class="intro">Pick a seed color, generate balanced harmonies and verify readable combinations before shipping your interface.</p>
+      </section>
 
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <label for="colorPicker">Click here to pick a color</label>
-                    <input type="color" id="colorPicker" class="form-control form-control-lg mb-3" value="#21d5c2">
-                    <div id="displayColor" class="border rounded-circle"></div>
-                </div>
-            </div>
-
-            <div class="color-info">
-                <button id="hexValue" class="color-code-btn">HEX: #ffffff</button>
-                <button id="rgbValue" class="color-code-btn">RGB: 255, 255, 255</button>
-                <button id="hslValue" class="color-code-btn">HSL: 0, 0%, 100%</button>
-            </div>
-
-            <div id="colorHistory" class="color-history"></div>
+      <section class="workspace">
+        <div class="picker-panel panel">
+          <div class="panel-title"><span>01</span><div><small>Seed input</small><h2>Color source</h2></div></div>
+          <div class="color-stage" id="color-stage">
+            <input id="color-picker" type="color" value="#7c5cff" aria-label="Choose a seed color">
+            <label for="color-picker"><span>OPEN PICKER</span><b id="stage-hex">#7C5CFF</b></label>
+          </div>
+          <label class="hex-field"><span>HEX</span><input id="hex-input" value="#7C5CFF" maxlength="7" spellcheck="false"><button id="random-button" type="button">SURPRISE ME</button></label>
+          <div class="value-grid">
+            <button class="value-card copy-value" data-format="hex"><small>HEX</small><strong id="hex-value">#7C5CFF</strong><span>COPY</span></button>
+            <button class="value-card copy-value" data-format="rgb"><small>RGB</small><strong id="rgb-value">124, 92, 255</strong><span>COPY</span></button>
+            <button class="value-card copy-value" data-format="hsl"><small>HSL</small><strong id="hsl-value">252°, 100%, 68%</strong><span>COPY</span></button>
+          </div>
         </div>
-        <section class="mb-5">
-            <h2 class="text-center mb-4">Others Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="/assets/images/programming_ng_new.jpg" class="card-img-top" width="auto" height="auto"
-                            alt="Projet 1">
-                        <div class="card-body">
-                            <h5 class="card-title">ESI-FIT</h5>
-                            <p class="card-text font-monospace text-truncate">
-                                A JavaFX application to simulate customer management in a small fitness studio.
-                            </p>
-                            <a href="https://github.com/sofoste93/ESI-FIT-CM-APP" target="_blank"
-                                class="btn btn-primary" rel="noopener">View source code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="/assets/images/programming_set.jpg" class="card-img-top" width="auto" height="auto"
-                            alt="Projet 2">
-                        <div class="card-body">
-                            <h5 class="card-title">TontineAPP</h5>
-                            <p class="card-text font-monospace text-truncate">Written in Python and Flask to manage the
-                                tontines of a small group of people.</p>
-                            <a href="http://sofostech.pythonanywhere.com/" target="_blank" class="btn btn-primary"
-                                rel="noopener">See the demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="/assets/images/coding_.jpg" class="card-img-top" width="auto" height="auto"
-                            alt="Projet 3">
-                        <div class="card-body">
-                            <h5 class="card-title">SmallQUIZ</h5>
-                            <p class="card-text font-monospace text-truncate">A console application, written in C
-                            </p>
-                            <a href="https://github.com/sofoste93/SmallQUIZ" target="_blank" class="btn btn-primary"
-                                rel="noopener">View source code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+        <div class="palette-panel panel">
+          <div class="panel-title"><span>02</span><div><small>Harmony engine</small><h2>Palette generator</h2></div></div>
+          <div class="harmony-tabs" id="harmony-tabs">
+            <button data-mode="analogous" class="active">Analogous</button><button data-mode="complementary">Complementary</button><button data-mode="triadic">Triadic</button><button data-mode="monochrome">Monochrome</button>
+          </div>
+          <div class="palette" id="palette" aria-label="Generated color palette"></div>
+          <div class="palette-actions"><p>Click a swatch to copy its HEX value.</p><button id="export-button" type="button">COPY CSS VARIABLES</button></div>
+        </div>
+
+        <div class="contrast-panel panel">
+          <div class="panel-title"><span>03</span><div><small>Accessibility</small><h2>Contrast check</h2></div></div>
+          <div class="contrast-preview" id="contrast-preview"><small>PREVIEW / UI LABEL</small><strong>Design that everyone can read.</strong><p>Accessible contrast makes interfaces clearer in every environment.</p></div>
+          <div class="contrast-controls">
+            <label><span>TEXT</span><input id="foreground" value="#FFFFFF" maxlength="7"><i id="foreground-chip"></i></label>
+            <button id="swap-button" type="button" aria-label="Swap colors">⇄</button>
+            <label><span>BACKGROUND</span><input id="background" value="#7C5CFF" maxlength="7"><i id="background-chip"></i></label>
+          </div>
+          <div class="contrast-result"><div><small>CONTRAST RATIO</small><strong id="contrast-ratio">4.76:1</strong></div><div class="badges"><span id="aa-badge">AA PASS</span><span id="aaa-badge">AAA FAIL</span></div></div>
+        </div>
+
+        <div class="history-panel panel">
+          <div class="panel-title"><span>04</span><div><small>Local memory</small><h2>Recent colors</h2></div><button id="clear-history" type="button">CLEAR</button></div>
+          <div class="history" id="color-history"></div>
+          <p class="empty-history" id="empty-history">Your recent colors will appear here.</p>
+        </div>
+      </section>
     </main>
-    <!-- Footer -->
-    <div class="text-center">
-        <p>If you like what I do, feel free to <a href="https://www.paypal.com/paypalme/sofoste">support my work by
-                buying me
-                a
-                coffee
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-cup-hot-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5Z" />
-                    <path
-                        d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z" />
-                </svg>
-            </a>.</p>
-        <footer class="bg-dark text-white text-center py-3 position-relative font-monospace fixed-bottom">
-            <p>&copy; 2026 <a href="https://sofoste.de/">sofoste.de</a> All rights reserved.</p>
-        </footer>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="./asset/js/custom_global.js"></script>
+    <footer><span>SOFOSTE COLOR ENGINE · VANILLA JS</span><span id="toast" role="status">READY</span><a href="mailto:info@sofoste.de">info@sofoste.de</a></footer>
+  </div>
+  <script src="asset/js/custom_global.js"></script>
 </body>
-
 </html>
