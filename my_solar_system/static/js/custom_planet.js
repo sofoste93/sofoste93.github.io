@@ -40,15 +40,16 @@ document.getElementById('planet-search').addEventListener('input', function () {
             info: "Neptune is the eighth and farthest-known Solar planet from the Sun. It is the fourth-largest planet by diameter and the third-largest by mass.",
             imagePath: "static/images/neptune.png"
         },
-        Pluto: {
+        pluto: {
             info: "Once considered the ninth planet, Pluto is now classified as a dwarf planet. It was the first Kuiper Belt object to be discovered.",
-            imagePath: "static/images/Pluto.png"
+            imagePath: "static/images/pluto.png"
         }
     };
 
     if (planets[planetName]) {
         // Display bubble info on the planet
-        const planetElement = document.querySelector(`.${planetName}`);
+        const planetSelector = planetName === 'pluto' ? '.dwarf-planet' : `.${planetName}`;
+        const planetElement = document.querySelector(planetSelector);
         const infoBubble = document.createElement('div');
         infoBubble.className = 'info-bubble';
         infoBubble.innerText = planetName.charAt(0).toUpperCase() + planetName.slice(1);

@@ -1,43 +1,66 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+:root {
+    --quest-ink: #08110f;
+    --quest-panel: #10201c;
+    --quest-cyan: #21d5c2;
+    --quest-amber: #f2a65a;
+}
+
+body.codequest-page {
+    min-height: 100vh;
     margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding: 7rem 1.5rem 3rem;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(33, 213, 194, .16), transparent 28rem),
+        radial-gradient(circle at 85% 90%, rgba(242, 166, 90, .12), transparent 30rem),
+        var(--quest-ink);
+    color: #eef5f2;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 #game-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    text-align: center;
+    width: min(100%, 720px);
+    padding: clamp(1.5rem, 5vw, 3rem);
+    background: rgba(16, 32, 28, .92);
+    border: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
 }
+
+#game-container > h1 {
+    margin: .8rem 0 1rem;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -.05em;
+}
+
+.game-intro { color: #a7b5b0; }
+#progress { margin: 2rem 0 .75rem; color: var(--quest-cyan); font: .75rem Consolas, monospace; letter-spacing: .1em; text-transform: uppercase; }
+#story { padding: 1.25rem; background: rgba(255, 255, 255, .05); border-left: 3px solid var(--quest-cyan); }
+#story h2 { margin: 0 0 .45rem; font-size: 1.25rem; }
+#story p { margin: 0; color: #b9c5c0; }
 
 textarea {
     width: 100%;
-    height: 100px;
-    margin-top: 10px;
+    min-height: 140px;
+    margin-top: 1rem;
+    padding: 1rem;
+    resize: vertical;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 0;
+    outline: none;
+    background: #050b09;
+    color: #d9fff9;
+    font: .9rem/1.65 Consolas, monospace;
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-#output {
-    margin-top: 20px;
-}
+textarea:focus { border-color: var(--quest-cyan); box-shadow: 0 0 0 3px rgba(33,213,194,.12); }
+.game-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+.game-actions button { padding: .8rem 1.1rem; border: 1px solid var(--quest-cyan); background: var(--quest-cyan); color: var(--quest-ink); font-weight: 700; cursor: pointer; }
+.game-actions button:last-child { background: transparent; color: var(--quest-cyan); }
+.game-actions button:disabled { cursor: not-allowed; opacity: .35; }
+#output { min-height: 3rem; margin-top: 1rem; padding: .8rem 1rem; border: 1px solid transparent; }
+#output:empty { padding: 0; }
+#output.success { color: #8af0c1; background: rgba(55, 200, 130, .1); border-color: rgba(55, 200, 130, .25); }
+#output.try-again { color: var(--quest-amber); background: rgba(242, 166, 90, .08); border-color: rgba(242, 166, 90, .24); }
+#output.error { color: #ff9b9b; background: rgba(255, 80, 80, .08); border-color: rgba(255, 80, 80, .22); }

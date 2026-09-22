@@ -1,151 +1,135 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <title>sofostech web</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/Logo/PNG/Favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/Logo/PNG/main-logo.png">
-    <link rel="manifest" href="logo/site.webmanifest">
-    <link rel="mask-icon" href="/assets/images/Logo/SVG/main-logo.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!--link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"-->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sofostech — the personal portfolio of Stéphane, a software developer, musician and curious maker.">
+    <meta name="theme-color" content="#08110f">
+    <title>Sofostech — Code, music & curiosity</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Logo/PNG/Favicon-32x32.png">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
-<body>
-    <header class="bg-dark text-white text-center py-5">
-        <h1>&#127757;Sofostech&#127757;</h1>
-        <p>Software developer &and; musicien</p>
-    </header>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><strong>Sofostech&#127760;</strong></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<body class="home-page" id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand brand" href="index.html" aria-label="Sofostech home">
+                <img src="assets/images/Logo/PNG/main-logo-white-transparent.png" alt="" width="144" height="144">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/news.html" rel="noopener">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/public/articles/articles.html" rel="noopener">Articles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/musique.html">Music</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/programmation.html">Programmation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="sofosteweb/index.html" title="about-me">About-Me</a>
-                    </li>
-                    <!--li class="nav-item">
-                        <a class="nav-link" href="/databaseweb/index.html" rel="noopener">DB Cheat</a>
-                    </!--li-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="/loisirs.html">Loisirs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/gallery.html" rel="noopener">Photos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/mydreso.html" rel="noopener">Archiv</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/stimme_afrikas/index.html">STIMME&#119070;AFRIKAS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact.html">Contact</a>
-                    </li>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#work">Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="musique.html">Music</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loisirs.html">Life</a></li>
+                    <li class="nav-item"><a class="nav-link" href="public/articles/articles.html">Writing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item ms-lg-2"><a class="button button-small" href="contact.html">Let’s talk <span aria-hidden="true">↗</span></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="/assets/images/music_gtr.jpg" class="card-img-top" width="auto" height="auto"
-                        alt="Musique">
-                    <div class="card-body">
-                        <h5 class="card-title">Music projects</h5>
-                        <p class="card-text font-monospace">Discover my passion for music and listen to some of my
-                            tracks..
-                        </p>
-                        <a href="/musique.html" class="btn btn-primary">Learn more</a>
-                    </div>
+    <header class="hero">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="container hero-layout">
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span></span> Software developer · Musician · Maker</p>
+                <h1>I build with <em>logic</em><br>and create with <em>soul.</em></h1>
+                <p class="hero-intro">Hi, I’m Stéphane. I turn ideas into useful software, songs and small experiments—always learning, always curious.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+                    <a class="text-link" href="sofosteweb/index.html">More about me <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="hero-meta" aria-label="Quick facts">
+                    <div><strong>03</strong><span>creative worlds</span></div>
+                    <div><strong>∞</strong><span>curiosity</span></div>
+                    <div><strong>WEB</strong><span>built to share</span></div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="/assets/images/programming_set.jpg" class="card-img-top" width="auto" height="auto"
-                        alt="Programmation">
-                    <div class="card-body">
-                        <h5 class="card-title">My IT projects</h5>
-                        <p class="card-text font-monospace">Discover some of my programming projects and make your own
-                            contribution..</p>
-                        <a href="/programmation.html" class="btn btn-primary">Learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="/assets/images/entertainment.jpg" class="card-img-top" width="auto" height="auto"
-                        alt="Loisirs">
-                    <div class="card-body">
-                        <h5 class="card-title">My Entertainment</h5>
-                        <p class="card-text font-monospace">Discover my other passions and hobbies: jogging, biking and
-                            playing soccer..
-                        </p>
-                        <a href="/loisirs.html" class="btn btn-primary">Learn more</a>
-                    </div>
-                </div>
+            <div class="portrait-wrap reveal">
+                <div class="portrait-orbit orbit-one"></div><div class="portrait-orbit orbit-two"></div>
+                <div class="portrait-frame"><img src="assets/images/steph.png" alt="Stéphane smiling" width="831" height="825"></div>
+                <div class="floating-note note-code"><span>01</span> Build</div>
+                <div class="floating-note note-music"><span>02</span> Compose</div>
+                <div class="availability"><i></i> Always learning</div>
             </div>
         </div>
+        <a class="scroll-cue" href="#worlds"><span>Scroll to discover</span><i aria-hidden="true"></i></a>
+    </header>
+
+    <main id="main-content">
+        <section class="worlds section" id="worlds">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><p class="eyebrow"><span></span> What makes me, me</p><h2>Three worlds.<br>One curious mind.</h2></div>
+                    <p>Technology gives ideas structure. Music gives them feeling. Life outside the screen keeps everything honest.</p>
+                </div>
+                <div class="world-grid">
+                    <a class="world-card reveal" href="programmation.html">
+                        <div class="world-image"><img src="assets/images/programming_set.jpg" alt="Code on a multi-screen development setup"></div><div class="world-number">01</div>
+                        <div class="world-content"><p>Developer</p><h3>Code & systems</h3><span>Projects, tools and learning experiments <b aria-hidden="true">↗</b></span></div>
+                    </a>
+                    <a class="world-card world-music reveal" href="musique.html">
+                        <div class="world-image"><img src="assets/images/music_gtr.jpg" alt="Guitars and music equipment in a home studio"></div><div class="world-number">02</div>
+                        <div class="world-content"><p>Musician</p><h3>Sound & stories</h3><span>Original songs, collaborations and demos <b aria-hidden="true">↗</b></span></div>
+                    </a>
+                    <a class="world-card reveal" href="loisirs.html">
+                        <div class="world-image"><img src="assets/images/mountain_bike.jpg" alt="Mountain bike beside an open country road"></div><div class="world-number">03</div>
+                        <div class="world-content"><p>Explorer</p><h3>Motion & wonder</h3><span>Sport, astronomy, photography and travel <b aria-hidden="true">↗</b></span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="selected-work section" id="work">
+            <div class="container">
+                <div class="section-heading compact reveal">
+                    <div><p class="eyebrow"><span></span> Selected projects</p><h2>Made to learn.<br>Built to share.</h2></div>
+                    <a class="text-link" href="programmation.html">View all projects <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="project-list">
+                    <article class="project-row reveal">
+                        <a class="project-image" href="my_solar_system/index.html"><img src="assets/images/solar-system.jpg" alt="Illustration of the solar system"><span>Explore project ↗</span></a>
+                        <div class="project-info"><p class="project-index">01 / Refreshed edition</p><h3>Mini Solar System v2</h3><p>A revisited browser experiment with planet search, display controls and an interactive dashboard.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+                    </article>
+                    <article class="project-row project-reverse reveal">
+                        <a class="project-image" href="CodeQuest/index.html"><img src="CodeQuest/assets/Code Quest_ JavaScript Adventures.png" alt="Code Quest JavaScript Adventures interface"><span>Play CodeQuest ↗</span></a>
+                        <div class="project-info"><p class="project-index">02 / Refreshed edition</p><h3>CodeQuest v2</h3><p>A refreshed JavaScript adventure that turns practice into play through short challenges and immediate feedback.</p><div class="tag-list"><span>JavaScript</span><span>Game</span><span>Learning</span></div></div>
+                    </article>
+                    <article class="project-row reveal">
+                        <a class="project-image" href="color_picker/index.html"><img src="assets/images/color_picker_sofostech-fotor_bg_remover.png" alt="Sofostech color picker project"><span>Try the tool ↗</span></a>
+                        <div class="project-info"><p class="project-index">03 / Refreshed edition</p><h3>Color Picker v2</h3><p>A refreshed color utility with HEX, RGB and HSL values plus a recent-color history.</p><div class="tag-list"><span>UI</span><span>JavaScript</span><span>Design</span></div></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="manifesto section">
+            <div class="container manifesto-grid">
+                <div class="manifesto-mark reveal" aria-hidden="true">“</div>
+                <blockquote class="reveal">I believe the best work happens where <em>discipline meets play</em>—where a technical problem can inspire a creative answer.</blockquote>
+                <div class="manifesto-side reveal"><p>That is the thread connecting my software, my music and every curious side project in between.</p><a class="text-link" href="gallery.html">See life through my lens <span aria-hidden="true">↗</span></a></div>
+            </div>
+        </section>
+
+        <section class="contact-cta section">
+            <div class="container reveal">
+                <p class="eyebrow"><span></span> Have an idea?</p>
+                <div class="cta-row"><h2>Let’s make something<br><em>meaningful.</em></h2><a class="round-link" href="contact.html" aria-label="Contact Stéphane"><span>Say hello</span><b aria-hidden="true">↗</b></a></div>
+            </div>
+        </section>
     </main>
 
-    <div class="text-warning-emphasis px-3 py-4 footer">
-        <div class="container-fluid text-center">
-            <a class="btn btn-outline-secondary card-text text-light-emphasis text-center rounded-0"
-                href="https://www.paypal.com/paypalme/sofoste">If you appreciate my work, you can
-                support me
-                <b>
-                    <em>by buying me a cup of coffee
-                        <img src='/stimme_afrikas/public/images/coffee_cup.png' width="16" height="16"
-                            alt="Coffee cup icon">
-                    </em>
-                </b>.
-                Your contributions are welcomed via <strong>PayPal</strong>
-            </a>
-            <footer
-                class="bg-dark text-white text-center py-3 position-relative font-monospace fixed-bottom card-footer">
-                <p>
-                    &copy; 2024 <a href="https://sofoste.tech/">sofoste.tech</a> All rights reserved
-                    | <a href="https://www.sofoste.com" target="_blank" rel="noopener" title="sofostemusic">Visit
-                        sofoste.com</a>
-                </p>
-            </footer>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand"><img src="assets/images/Logo/PNG/main-logo-white-transparent.png" alt="Sofostech" width="144" height="144"><p>Code. Music. Curiosity.</p></div>
+            <div><p class="footer-label">Explore</p><a href="programmation.html">Projects</a><a href="musique.html">Music</a><a href="loisirs.html">Hobbies</a><a href="gallery.html">Gallery</a></div>
+            <div><p class="footer-label">Elsewhere</p><a href="https://sofoste.de" target="_blank" rel="noopener">sofoste.de ↗</a><a href="https://github.com/sofoste93" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.youtube.com/@sofoste" target="_blank" rel="noopener">YouTube ↗</a><a href="https://sofoste.blogspot.com/" target="_blank" rel="noopener">Blog ↗</a></div>
+            <div class="footer-note"><p class="footer-label">Made by</p><p>Stéphane, with care<br>and a good playlist.</p></div>
         </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <!--script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script-->
+        <div class="container footer-bottom"><span>© <span id="current-year">2026</span> Sofostech</span><a href="#top">Back to top ↑</a></div>
+    </footer>
     <script src="assets/js/custom.js"></script>
 </body>
-
 </html>

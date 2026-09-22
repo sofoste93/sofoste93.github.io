@@ -57,6 +57,9 @@ colorPicker.addEventListener('input', function () {
     addColorToHistory(chosenColor);
 });
 
+displayColor.style.backgroundColor = colorPicker.value;
+updateColorInfo(colorPicker.value);
+
 // Helper functions to convert HEX to RGB and RGB to HSL
 function hexToRgb(hex) {
     let r = 0, g = 0, b = 0;
