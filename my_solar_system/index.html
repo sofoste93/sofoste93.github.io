@@ -1,139 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <title>Mini Solar System v2 | Sofostech</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020807">
+    <meta name="description" content="Sofoste Orbital Lab V3 — an interactive solar-system simulation.">
+    <title>Orbital Lab V3 | Sofostech</title>
+    <link rel="icon" type="image/png" href="../assets/images/Logo/PNG/Favicon-32x32.png">
     <link rel="stylesheet" href="static/css/custom_solarsystem.css">
 </head>
-
 <body>
-
-    <div class="p-5 mb-4 bg-light rounded-3 text-dark" id="the-planets">
-
-        <header>
-            <div class="container mt-4">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3">
-                        <div class="input-group">
-                            <span class="input-group-text">Search Planet</span>
-                            <label for="planet-search"></label>
-                            <input type="text" class="form-control" id="planet-search"
-                                placeholder="Enter planet name...">
-                        </div>
-                    </div>
-                </div>
+    <div class="app-shell">
+        <header class="topbar">
+            <a class="lab-brand" href="../index.html" aria-label="Back to Sofostech">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span><strong>SOFOSTE</strong><small>ORBITAL LAB</small></span>
+            </a>
+            <div class="mission-status">
+                <span class="status-dot"></span>
+                <span>SIMULATION ONLINE</span>
+                <b>V3.0</b>
             </div>
-
+            <div class="topbar-actions">
+                <button class="icon-button" id="fullscreen-button" type="button" aria-label="Toggle fullscreen">⛶</button>
+                <a class="exit-link" href="../programmation.html">Exit lab <span>↗</span></a>
+            </div>
         </header>
 
-        <div class="container-fluid py-5">
-            <span class="badge text-bg-info mb-3">Refreshed portfolio edition</span>
-            <h1 class="display-5 fw-bold">Mini Solar System v2</h1>
-            <div class="container mt-4">
-                <div class="container mt-4">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="darkModeSwitch" />
-                        <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="orbitSwitch" />
-                        <label class="form-check-label" for="orbitSwitch">Display Orbits</label>
-                    </div>
+        <main class="lab-grid">
+            <aside class="control-panel" aria-label="Simulation controls">
+                <div class="panel-heading">
+                    <span>01</span>
+                    <div><small>Navigation</small><h1>Solar bodies</h1></div>
                 </div>
-            </div>
-            <div class="col-md-8 fs-4 position-center card-body">
-                <div class="solar-system">
-                    <div class="sun"></div>
-                    <div class="orbit mercury-orbit"></div>
-                    <div class="orbit venus-orbit"></div>
-                    <div class="orbit earth-orbit"></div>
-                    <div class="orbit mars-orbit"></div>
-                    <div class="orbit jupiter-orbit"></div>
-                    <div class="orbit saturn-orbit"></div>
-                    <div class="orbit uranus-orbit"></div>
-                    <div class="orbit neptune-orbit"></div>
-                    <div class="orbit dwarf-planet-orbit"></div>
-                    <div class="planet mercury"></div>
-                    <div class="planet venus"></div>
-                    <div class="planet earth"></div>
-                    <div class="planet mars"></div>
-                    <div class="planet jupiter"></div>
-                    <div class="planet saturn">
-                        <div class="rings"></div>
-                    </div>
-                    <div class="planet uranus"></div>
-                    <div class="planet neptune"></div>
-                    <div class="planet dwarf-planet"></div>
-                </div>
-            </div>
-            <a class="btn btn-primary btn-lg" href="static/templates/dashboard.html" role="button">Dashboard</a>
-        </div>
-    </div>
 
-    <main id="the-planet" class="text-dark">
-        <div class="container mt-4" id="planet-card" style="display: none;">
-            <div class="card" style="width: 18rem;">
-                <img src="static/images/pluto.png" class="card-img-top" alt="Planet Image" id="planet-image">
-                <div class="card-body">
-                    <h5 class="card-title" id="planet-card-title">Planet Name</h5>
-                    <p class="card-text" id="planet-card-description">Some quick info about the planet.</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#planetModal">
-                        More Details
-                    </button>
-                </div>
-            </div>
-        </div>
+                <label class="search-field" for="planet-search">
+                    <span aria-hidden="true">⌕</span>
+                    <input id="planet-search" type="search" placeholder="Search a planet…" autocomplete="off">
+                </label>
 
-        <!-- Modal -->
-        <div class="modal fade" id="planetModal" tabindex="-1" aria-labelledby="planetModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="planetModalLabel">Planet Name</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Detailed information about the planet will go here.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
+                <div class="planet-list" id="planet-list" aria-label="Select a celestial body"></div>
+
+                <div class="control-block">
+                    <div class="control-title"><span>Simulation speed</span><output id="speed-output">32 d/s</output></div>
+                    <input id="speed-control" type="range" min="0" max="100" value="42" aria-label="Simulation speed">
+                    <div class="range-labels"><span>Real-time</span><span>Warp</span></div>
                 </div>
-            </div>
-        </div>
-    </main>
-    <div class="text-center">
-        <p>If you like what I do, you can support me with <a href="https://www.paypal.com/paypalme/sofoste">a cup of
-                coffee
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-cup-hot-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5Z" />
-                    <path
-                        d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z" />
-                </svg>
-            </a>.</p>
-        <footer class="bg-dark text-white text-center py-3 position-relative font-monospace fixed-bottom">
-            <p>&copy; 2026 <a href="https://sofoste.de/">sofoste.de</a> All rights reserved.</p>
+
+                <div class="control-block">
+                    <div class="control-title"><span>Viewport zoom</span><output id="zoom-output">100%</output></div>
+                    <input id="zoom-control" type="range" min="65" max="150" value="100" aria-label="Viewport zoom">
+                </div>
+
+                <div class="toggle-grid">
+                    <label class="switch-row"><span>Orbit paths</span><input id="orbit-toggle" type="checkbox" checked><i></i></label>
+                    <label class="switch-row"><span>Planet labels</span><input id="label-toggle" type="checkbox" checked><i></i></label>
+                    <label class="switch-row"><span>Telemetry grid</span><input id="grid-toggle" type="checkbox" checked><i></i></label>
+                </div>
+            </aside>
+
+            <section class="viewport" aria-label="Interactive solar system simulation">
+                <canvas id="space-canvas"></canvas>
+                <div class="viewport-vignette" aria-hidden="true"></div>
+                <div class="coordinates"><span id="cursor-coordinates">X 000.00 · Y 000.00</span><b>HELIOCENTRIC VIEW</b></div>
+                <div class="sim-clock">
+                    <small>MISSION TIME</small>
+                    <strong id="simulation-date">-- --- ----</strong>
+                    <span id="elapsed-days">T + 0000.0 DAYS</span>
+                </div>
+                <button class="pause-button" id="pause-button" type="button"><span id="pause-icon">Ⅱ</span><b id="pause-label">Pause simulation</b></button>
+                <div class="canvas-hint">Select a body on the map or use the navigation panel</div>
+            </section>
+
+            <aside class="inspector" aria-live="polite">
+                <div class="panel-heading">
+                    <span>02</span>
+                    <div><small>Live telemetry</small><h2>Body inspector</h2></div>
+                </div>
+
+                <div class="planet-visual">
+                    <div class="scan-line" aria-hidden="true"></div>
+                    <img id="planet-image" src="static/images/Earth.png" alt="Earth">
+                    <span class="target-corner top-left"></span><span class="target-corner top-right"></span>
+                    <span class="target-corner bottom-left"></span><span class="target-corner bottom-right"></span>
+                    <div class="visual-label">OPTICAL FEED · <b>LIVE</b></div>
+                </div>
+
+                <div class="planet-header">
+                    <div><p id="planet-class">TERRESTRIAL PLANET</p><h2 id="planet-name">Earth</h2></div>
+                    <span id="planet-index">03</span>
+                </div>
+                <p class="planet-description" id="planet-description"></p>
+
+                <dl class="telemetry">
+                    <div><dt>Distance from Sun</dt><dd id="planet-distance">149.6M km</dd></div>
+                    <div><dt>Orbital period</dt><dd id="planet-period">365.25 days</dd></div>
+                    <div><dt>Diameter</dt><dd id="planet-diameter">12,742 km</dd></div>
+                    <div><dt>Known moons</dt><dd id="planet-moons">1</dd></div>
+                    <div><dt>Mean temperature</dt><dd id="planet-temperature">15 °C</dd></div>
+                    <div><dt>Current velocity</dt><dd id="planet-velocity">29.8 km/s</dd></div>
+                </dl>
+
+                <div class="signal">
+                    <span>DATA INTEGRITY</span>
+                    <div><i></i></div>
+                    <b>99.8%</b>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="lab-footer">
+            <span>SOFOSTE ORBITAL ENGINE · CANVAS 2D</span>
+            <span>8 PLANETS + 1 DWARF PLANET</span>
+            <a href="mailto:info@sofoste.de">info@sofoste.de</a>
         </footer>
     </div>
-
+    <noscript>This simulation requires JavaScript to animate the planetary system.</noscript>
     <script src="static/js/custom_planet.js"></script>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-        </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-        </script>
 </body>
-
 </html>
